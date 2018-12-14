@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.25;
 contract DAO {
 
     mapping(address=>uint) shares;
@@ -53,7 +53,7 @@ contract DAO {
         bids[index].fulfilled = true;
     }
 
-    function getShares(address owner) public returns (uint) {
+    function getShares(address owner) public view returns (uint) {
         return shares[owner];
     }
 
